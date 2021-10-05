@@ -4,20 +4,18 @@ pygame.init()
 
 WIDTH = 800
 HEIGHT = 400
-
-WHITE = (255, 255, 255)
 FPS = 60
 CLOCK = pygame.time.Clock()
-
-display_surface = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Eat The Bee")
-display_surface.fill(WHITE)
 
 BLACK = (0, 0, 0)
 GRAY = (50, 50, 50)
 WHITE = (255, 255, 255)
 RED = (220, 20, 60)
 GREEN = (50, 205, 50)
+
+display_surface = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Eat The Bee")
+display_surface.fill(WHITE)
 
 LIFE = 5
 SCORE = 0
