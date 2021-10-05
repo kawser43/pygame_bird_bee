@@ -1,4 +1,5 @@
-import pygame, random
+import pygame
+import random
 
 pygame.init()
 
@@ -69,6 +70,7 @@ while running:
         is_paused = True
         while is_paused:
             for event in pygame.event.get():
+
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_SPACE:
                         LIFE = 5
@@ -76,6 +78,11 @@ while running:
                         BEE_SPEED = BEE_SPEED_STARTING
                         bird_rect.y = HEIGHT // 2
                         pygame.mixer.music.play(-1, 0)
+                        score_text = score_font.render("Score: " + str(SCORE), True, GREEN, None)
+                        life_text = score_font.render("Life: " + str(LIFE), True, RED, None)
+                        display_surface.blit(score_text, score_text_rect)
+                        display_surface.blit(life_text, life_text_rect)
+                        pygame.display.update()
                         is_paused = False
 
                 if event.type == pygame.QUIT:
